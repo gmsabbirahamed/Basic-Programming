@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int n,key,l,r,mid;
+    int n,key,l,r,mid,f=0;
     cout << "Enter size of array : ";
     cin >> n;
 
@@ -26,6 +26,7 @@ int main()
         if(arr[mid] == key)
         {
             cout << "Found" << endl;
+            f=1;
             break;
         }
         else if (arr[mid] > key)
@@ -42,7 +43,7 @@ int main()
         }
 
     }
-    if(arr[mid] != key)
+    if(f==0)
         cout << "Not found" <<endl;
 
     return 0;
